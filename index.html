@@ -1,0 +1,195 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://cs9f3b.4pda.ws/23083125.png">
+    <title>Anixart</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#home">Главная</a></li>
+            <li><a href="#genres">Жанры</a></li>
+            <li><a href="#categories">Катергории</a></li>
+            <li><a href="#contacts">Контакты</a></li>
+        </ul>
+    </nav>
+    <section id="home">
+        <h1>Добро пожаловать на аниме сайт!</h1>
+        <p>Здесь вы найдете обзоры, новости и интересную информация о вашем любимом аниме.</p>
+    </section>
+    <section id="genres">
+        <h2>Жанры аниме</h2>
+        <p>Аниме делятся на различные жанры, такие как:</p>
+        <select id="genre-select" onchange="showGenreDescription()"> 
+            <option value="">--Выберите Жанр--</option>
+            <option value="action">Экшен</option>
+            <option value="romance">Романтика</option>
+            <option value="fantasy">Фэнтези</option>
+            <option value="shonen">Сёнен</option>
+            <option value="shojo">Сёдзе</option>
+            <option value="mecha">Меха</option>
+        </select>
+        <div id="genre-description"></div>
+        <div id="anime-container" class="anime-container"></div>
+    </section>
+    <section id="categories">
+        <h2>Категории Аниме</h2>
+        <p>На сайте можно найти аниме, разделенные по категориям:</p>
+        <div class="category-item" onclick="showCategoryDescription('new')">Новые релизы</div>
+        <div class="category-item" onclick="showCategoryDescription('popular')">Популярные</div>
+        <div class="category-item" onclick="showCategoryDescription('top-rated')">Лучшие по рейтингу</div>
+        <div class="category-item" onclick="showCategoryDescription('classic')">Классика</div>
+
+        <div id="category-description"></div>
+        <div id="category-anime-container" class="anime-container"></div>
+    </section>
+    <section id="anime">
+        <h2 align="center">Рекомендуемые аниме</h2>
+        <div class="anime-container">
+            <div class="anime-card">
+                <img src="https://gen.jut.su/uploads/animethumbs/anime_ao-no-hako.jpg" alt="Если не грузит, то это значит что у тебя инет говно">
+                <h3><a href="https://jut.su/ao-no-hako/" class="sss"><font color="aqua">Голубая шкатулка</font></a></h3>
+            </div>
+            <div class="anime-card">
+                <img src="https://gen.jut.su/uploads/animethumbs/anime_one-punch-man.jpg" alt="Если не грузит, то у тебя инет говно">
+                <h3><a href="https://jut.su/onepuunchman/" class="sss"><font color="yellow">Ванпанчмен</font></a></h3>
+            </div>
+            <div class="anime-card">
+                <img src="https://gen.jut.su/uploads/animethumbs/anime_sword-art-online.jpg" alt="Если не грузит, то у тебя инет говно">
+                <h3><a href="https://jut.su/sword-arts-online/" class="sss"><font color="black">Мастера меча онлайн</font></a></h3>
+            </div>
+            <div class="anime-card">
+                <img src="https://gen.jut.su/uploads/animethumbs/anime_tokyo-ghoul.jpg" alt="Если не грузит, то у тебя инет говно">
+                <h3><a href="https://jut.su/tokushu/" class="sss"><font color="white">Токийский Гуль</font></a></h3>
+            </div>
+            <div class="anime-card">
+                <img src="https://gen.jut.su/uploads/animethumbs/anime_steins-gate.jpg" alt="Если не грузит, то у тебя инет говно">
+                <h3><a href="https://jut.su/stein-gate/" class="sss"><font color="brown">Врата Штейна</font></a></h3>
+            </div>
+            <div class="anime-card">
+                <img src="https://gen.jut.su/uploads/animethumbs/anime_no-game-no-life.jpg" alt="Если не грузит, то у тебя инет говно">
+                <h3><a href="https://jut.su/life-no-game/" class="sss"><font color="pink">Нет игры - нет жизни</font></a></h3>
+            </div>
+            <div class="anime-card">
+                <img src="https://gen.jut.su/uploads/animethumbs/anime_code-geass.jpg" alt="Если не грузит, то у тебя инет говно">
+                <h3><a href="https://jut.su/code-geass/" class="sss"><font color="black">Код Гиас</font></a></h3>
+            </div>
+            <div class="anime-card">
+                <img src="https://gen.jut.su/uploads/animethumbs/anime_re-zero.jpg" alt="Если не грузит, то у тебя инет говно">
+                <h3><a href="https://jut.su/re-zerou-kara/" class="sss"><font color="blue">С нуля: Пособие по выживанию в альтернативном мире</font></a></h3>
+            </div>
+            <div class="anime-card">
+                <img src="https://gen.jut.su/uploads/animethumbs/anime_toradora.jpg" alt="Если не грузит, то у тебя инет говно">
+                <h3><a href="https://jut.su/toradora/" class="sss"><font color="pink">ТораДора</font></a></h3>
+            </div>
+            <div class="anime-card">
+                <img src="https://gen.jut.su/uploads/animethumbs/anime_mob-psycho-100.jpg" alt="Если не грузит, то у тебя инет говно">
+                <h3><a href="https://jut.su/mob-100/" class="sss"><font color="aquamarine">Моб Психо 100</font></a></h3>
+            </div>
+            <div class="anime-card">
+                <img src="https://gen.jut.su/uploads/animethumbs/anime_boku-dake.jpg" alt="Если не грузит, то у тебя инет говно">
+                <h3><a href="https://jut.su/boku-dake/" class="sss"><font color="darkred">Город, в котором меня</font></a></h3>
+            </div>
+            <div class="anime-card">
+                <img src="https://gen.jut.su/uploads/animethumbs/anime_akame-ga-kill.jpg" alt="Если не грузит, то у тебя инет говно">
+                <h3><a href="https://jut.su/akame-ga-kiru/" class="sss"><font color="red">Убийца Акаме!</font></a></h3>
+            </div>
+            <div class="anime-card">
+                <img src="https://gen.jut.su/uploads/animethumbs/anime_angel-beats.jpg" alt="Если не грузит, то у тебя инет говно">
+                <h3><a href="https://jut.su/angela-beats/" class="sss"><font color="white">Ангельские ритмы!</font></a></h3>
+            </div>
+            <div class="anime-card">
+                <img src="https://gen.jut.su/uploads/animethumbs/anime_haikyuu.jpg" alt="Если не грузит, то у тебя инет говно">
+                <h3><a href="https://jut.su/haaikyu/" class="sss"><font color="orange">Волейбол!</font></a></h3>
+            </div>
+            <div class="anime-card">
+                <img src="https://gen.jut.su/uploads/animethumbs/anime_yakusoku-neverland.jpg" alt="Если не грузит, то у тебя инет говно">
+                <h3><a href="https://jut.su/yakusoku-neverland/" class="sss"><font color="yellow">Обещанный Неверленд</font></a></h3>
+            </div>
+            <div class="anime-card">
+                <img src="https://gen.jut.su/uploads/animethumbs/anime_blue-exorcist.jpg" alt="Если не грузит, то у тебя инет говно">
+                <h3><a href="https://jut.su/ao-exorcist/" class="sss"><font color="blue">Синий Экзорцист</font></a></h3>
+            </div>
+            <div class="anime-card">
+                <img src="https://gen.jut.su/uploads/animethumbs/anime_kiseijuu.jpg" alt="Если не грузит, то у тебя инет говно">
+                <h3><a href="https://jut.su/kiseijuu/" class="sss"><font color="black">Паразит</font></a></h3>
+            </div>
+            <div class="anime-card">
+                <img src="https://gen.jut.su/uploads/animethumbs/anime_cowboy-bebop.jpg" alt="Если не грузит, то у тебя инет говно">
+                <h3><a href="https://jut.su/cowboy-bebop/" class="sss"><font color="whitesmoke">Ковбой Бибоп</font></a></h3>
+            </div>
+            <div class="anime-card">
+                <img src="https://gen.jut.su/uploads/animethumbs/anime_violet-evergarden.jpg" alt="Если не грузит, то у тебя инет говно">
+                <h3><a href="https://jut.su/vioulet-evergarden/" class="sss"><font color="whiteyellow">Вайолет Эвергарден</font></a></h3>
+            </div>
+            <div class="anime-card">
+                <img src="https://gen.jut.su/uploads/animethumbs/anime_death-parade.jpg" alt="Если не грузит, то у тебя инет говно">
+                <h3><a href="https://jut.su/death-parade/" class="sss"><font color="">Парад смерти</font></a></h3>
+            </div>
+            <div class="anime-card">
+                <img src="https://gen.jut.su/uploads/animethumbs/anime_seishun-buta.jpg" alt="Если не грузит, то у тебя инет говно">
+                <h3><a href="https://jut.su/seishun-buta/" class="sss"><font color="yellow">Этот глупый свин не понимает мечту девочки-зайки</font></a></h3>
+            </div>
+            <div class="anime-card">
+                <img src="https://gen.jut.su/uploads/animethumbs/anime_kaguya-sama.jpg" alt="Если не грузит, то у тебя инет говно">
+                <h3><a href="https://jut.su/kaguya-sama/" class="sss"><font color="red">Госпожа Кагуя: в любви как на войне</font></a></h3>
+            </div>
+            <div class="anime-card">
+                <img src="https://gen.jut.su/uploads/animethumbs/anime_fairytail.jpg" alt="Если не грузит, то у тебя инет говно">
+                <h3><a href="https://jut.su/faairytail/" class="sss"><font color="yellowred">Фейри Тейл</font></a></h3>
+            </div>
+            <div class="anime-card">
+                <img src="https://gen.jut.su/uploads/animethumbs/anime_jojo-bizarre-adventure.jpg" alt="Если не грузит, то у тебя инет говно">
+                <h3><a href="https://jut.su/jojo-bizarre-adventure/" class="sss"><font color="darkgreen">Невероятные приключения ДжоДжо</font></a></h3>
+            </div>
+            <div class="anime-card">
+                <img src="https://gen.jut.su/uploads/animethumbs/anime_another.jpg" alt="Если не грузит, то у тебя инет говно">
+                <h3><a href="https://jut.su/anoother/" class="sss"><font color="darkred">Другая</font></a></h3>
+            </div>
+            <div class="anime-card">
+                <img src="https://gen.jut.su/uploads/animethumbs/anime_spy-family.jpg" alt="Если не грузит, то у тебя инет говно">
+                <h3><a href="https://jut.su/spy-family/" class="sss"><font color="white">Семья шпиона</font></a></h3>
+            </div>
+            <div class="anime-card">
+                <img src="https://gen.jut.su/uploads/animethumbs/anime_tate-yuusha-nariagari.jpg" alt="Если не грузит, то у тебя инет говно">
+                <h3><a href="https://jut.su/tate-yuusha-nariagari/" class="sss"><font color="green">Восхождение героя щита</font></a></h3>
+            </div>
+            <div class="anime-card">
+                <img src="https://gen.jut.su/uploads/animethumbs/anime_vinland-saga.jpg" alt="Если не грузит, то у тебя инет говно">
+                <h3><a href="https://jut.su/viinland-saga/" class="sss"><font color="orange">Сага о Винланде</font></a></h3>
+            </div>
+            <div class="anime-card">
+                <img src="https://gen.jut.su/uploads/animethumbs/anime_yahari-ore-no-seishun.jpg" alt="Если не грузит, то у тебя инет говно">
+                <h3><a href="https://jut.su/yahari-ore-no-seishun/" class="sss"><font color="pink">Розовая пора моей школьной жизни сплошной обман</font></a></h3>
+            </div>
+            <div class="anime-card">
+                <img src="https://gen.jut.su/uploads/animethumbs/anime_fate-zero.jpg" alt="Если не грузит, то у тебя инет говно">
+                <h3><a href="https://jut.su/faate-zero/" class="sss"><font color="yellow">Судьба: Начало</font></a></h3>
+            </div>
+            
+        </div>
+    </section>
+    <section id="contacts">
+        <h2>Контакты</h2>
+        <p>Для связи с нами используйте следующие данные:</p>
+        <p>Email: info@anime-site.com</p>
+        <p>Телефон: +7 (123) 456-78-90</p>
+        <p>Адрес: ул. Аниме, 123, JP</p>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
